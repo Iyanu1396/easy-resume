@@ -1,7 +1,7 @@
 function page() {
   return (
     <div>
-      hello
+      home page in progress
     </div>
   )
 }
