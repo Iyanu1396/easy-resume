@@ -1,6 +1,5 @@
 "use client";
 
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -36,69 +35,70 @@ const GoogleIcon = () => (
 
 export default function SignUpPage() {
   return (
-    <main className="min-h-screen grid lg:grid-cols-2">
+    <main className="min-h-screen grid lg:grid-cols-2 bg-gray-100">
       {/* Form Section */}
-      <div className="flex items-center justify-center p-8">
+      <div className="flex items-center justify-center p-8 bg-white shadow-md">
         <div className="w-full max-w-md space-y-8">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">
-              Get Started Now
-            </h1>
-          </div>
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">Get Started Now</h1>
 
           <form className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
+              <div>
                 <Label htmlFor="firstName">First name</Label>
                 <Input
                   id="firstName"
                   name="firstName"
                   type="text"
                   required
-                  placeholder="Enter your first name"
+                  placeholder="First name"
+                  className="rounded-lg border border-gray-300 focus:ring focus:ring-[#3A5B22] focus:border-[#3A5B22]"
                 />
               </div>
-              <div className="space-y-2">
+              <div>
                 <Label htmlFor="middleName">Middle name (optional)</Label>
                 <Input
                   id="middleName"
                   name="middleName"
                   type="text"
-                  placeholder="Enter your middle name"
+                  placeholder="Middle name"
+                  className="rounded-md border-gray-300 focus:ring-2 focus:ring-[#3A5B22]"
                 />
               </div>
             </div>
 
-            <div className="space-y-2">
+            <div>
               <Label htmlFor="lastName">Last name</Label>
               <Input
                 id="lastName"
                 name="lastName"
                 type="text"
                 required
-                placeholder="Enter your last name"
+                placeholder="Last name"
+                className="rounded-md border-gray-300 focus:ring-2 focus:ring-[#3A5B22]"
               />
             </div>
 
-            <div className="space-y-2">
+            <div>
               <Label htmlFor="email">Email</Label>
               <Input
                 id="email"
                 name="email"
                 type="email"
                 required
-                placeholder="Enter your email"
+                placeholder="Email"
+                className="rounded-md border-gray-300 focus:ring-2 focus:ring-[#3A5B22]"
               />
             </div>
 
-            <div className="space-y-2">
+            <div>
               <Label htmlFor="password">Password</Label>
               <Input
                 id="password"
                 name="password"
                 type="password"
                 required
-                placeholder="Enter your password"
+                placeholder="Password"
+                className="rounded-md border-gray-300 focus:ring-2 focus:ring-[#3A5B22]"
               />
             </div>
 
@@ -111,30 +111,30 @@ export default function SignUpPage() {
 
             <Button
               type="submit"
-              className="w-full bg-[#3A5B22] hover:bg-[#2A4418] text-white rounded-md"
+              className="w-full bg-[#3A5B22] text-white rounded-md hover:bg-[#2A4418] active:bg-[#1C3410] focus:ring focus:ring-offset-2 focus:ring-[#3A5B22]"
             >
               Sign Up
             </Button>
 
-            <div className="relative">
+            <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
+                <span className="w-full border-t border-gray-200" />
               </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-white px-2 text-muted-foreground">or</span>
+              <div className="relative flex justify-center text-sm text-gray-500 bg-gray-100 px-2">
+                or
               </div>
             </div>
 
             <Button
               type="button"
               variant="outline"
-              className="w-full flex items-center justify-center space-x-2"
+              className="w-full flex items-center justify-center space-x-2 border-gray-300 hover:border-[#3A5B22] focus:ring-2 focus:ring-[#3A5B22]"
             >
               <GoogleIcon />
-              <span>Sign in with Google</span>
+              <span>Sign up with Google</span>
             </Button>
 
-            <p className="text-center text-sm text-muted-foreground">
+            <p className="text-center text-sm text-gray-500">
               Have an account?{" "}
               <Link href="/login" className="text-[#3A5B22] hover:underline">
                 Sign In
@@ -145,14 +145,13 @@ export default function SignUpPage() {
       </div>
 
       {/* Image Section */}
-      <div className="hidden lg:block relative bg-gray-50">
+      <div className="hidden lg:block relative">
         <Image
           src="/illustration.png"
-          alt="illustration"
-          className="object-cover object-center"
+          alt="Sign up illustration"
+          className="object-cover w-full h-full"
           fill
           priority
-          sizes="(max-width: 1024px) 0vw, 50vw"
         />
       </div>
     </main>
