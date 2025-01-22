@@ -34,24 +34,19 @@ const GoogleIcon = () => (
   </svg>
 );
 
-export default function SignUpPage() {
+export default function LogInPage() {
   return (
-    <main className="min-h-screen grid lg:grid-cols-2">
+    <main className="min-h-screen grid lg:grid-cols-2 bg-gray-100">
       {/* Form Section */}
-      <div className="flex items-center justify-center p-8">
+      <div className="flex items-center justify-center p-8 bg-white">
         <div className="w-full max-w-md space-y-8">
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">
-             Welcome Back!
-            </h1>
-            <p className="font-medium">Enter your Credentials to access your account</p>
-          </div>
+        <div className="space-y-4">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-800">Welcome Back!</h1>
+          <p className="text-gray-600 text-sm">Enter your credentials to access your account</p>
+        </div>
+
 
           <form className="space-y-6">
-         
-
-            
-
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input
@@ -66,48 +61,53 @@ export default function SignUpPage() {
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input
-                id="password"
-                name="password"
-                type="password"
+                id="email"
+                name="email"
+                type="email"
                 required
-                placeholder="Enter your password"
+                placeholder="Enter your email"
+                className="rounded-lg border border-gray-300 focus:border-[#3A5B22] focus:ring focus:ring-[#3A5B22]"
               />
+
             </div>
 
             <div className="flex items-center space-x-2">
               <Checkbox id="terms" />
-              <Label htmlFor="terms" className="text-sm">
+              <Label htmlFor="terms" className="text-sm text-gray-600">
                 Remember me
               </Label>
             </div>
 
+
             <Button
-              type="submit"
-              className="w-full bg-[#3A5B22] hover:bg-[#2A4418] text-white rounded-md"
+            type="submit"
+            className="w-full bg-[#3A5B22] text-white py-2 rounded-lg font-medium hover:bg-[#2A4418] active:bg-[#1C3410] focus:ring focus:ring-[#3A5B22]"
             >
              Login
             </Button>
 
-            <div className="relative">
+
+            <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
+                <span className="w-full border-t border-gray-300" />
               </div>
-              <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-white px-2 text-muted-foreground">or</span>
+              <div className="relative flex justify-center text-sm text-gray-500 bg-white px-2">
+                or
               </div>
             </div>
 
+
             <Button
-              type="button"
-              variant="outline"
-              className="w-full flex items-center justify-center space-x-2"
+            type="button"
+            className="w-full flex items-center justify-center space-x-2 border border-gray-300 bg-white text-gray-600 hover:bg-gray-50 focus:ring focus:ring-[#3A5B22]"
             >
-              <GoogleIcon />
-              <span>Sign in with Google</span>
+            <GoogleIcon />
+            <span>Sign in with Google</span>
             </Button>
 
+
             <p className="text-center text-sm text-muted-foreground">
-              Dont Have an account?{" "}
+              Don't Have an account?{" "}
               <Link href="/signup" className="text-[#3A5B22] hover:underline">
                 Sign Up
               </Link>
@@ -117,16 +117,17 @@ export default function SignUpPage() {
       </div>
 
       {/* Image Section */}
-      <div className="hidden lg:block relative bg-gray-50">
+      <div className="hidden lg:block relative bg-gradient-to-br from-gray-200 to-gray-100">
         <Image
           src="/illustration-signup.png"
-          alt="illustration"
+          alt="Welcome illustration"
           className="object-cover object-center"
           fill
           priority
           sizes="(max-width: 1024px) 0vw, 50vw"
-        />
+      />
       </div>
+
     </main>
   );
 }
