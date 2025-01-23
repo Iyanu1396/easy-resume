@@ -1,6 +1,5 @@
 "use client";
 
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -41,10 +40,10 @@ export default function SignUpPage() {
       <div className="flex items-center justify-center p-8">
         <div className="w-full max-w-md space-y-8">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">
+            <h1 className="text-3xl font-bold tracking-tight ">
              Welcome Back!
             </h1>
-            <p className="font-medium">Enter your Credentials to access your account</p>
+            <p className="font-medium" >Enter your Credentials to access your account</p>
           </div>
 
           <form className="space-y-6">
