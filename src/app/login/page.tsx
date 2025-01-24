@@ -150,7 +150,7 @@ export default function Page() {
       {/* Image Section */}
       <div className="hidden lg:block relative bg-gray-50">
         <Image
-          src="/illustration-signup.png"
+          src="/illustration.png"
           alt="illustration"
           className="object-cover object-center"
           fill
