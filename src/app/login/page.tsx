@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import GoogleIcon from "@/_ui/GoogleIcon";
 import { useLogin } from "@/_features/auth/useLogin";
 
@@ -138,7 +137,7 @@ export default function Page() {
             </Button>
 
             <p className="text-center text-sm text-muted-foreground">
-              Dont Have an account?{" "}
+              Dont Have an account?
               <Link href="/signup" className="text-[#3A5B22] hover:underline">
                 Sign Up
               </Link>
